@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div style="box-shadow: 5px 5px 10px #888888; background-color: white; text-align: center; border-radius: 5px; padding: 50px;">
+            <h1>Attendance Report</h1>
+            <p>Your attendance report is ready for download:</p>
+            <br>
+            <a href="{% url 'download' csv_file_name %}" download><img style="width: 100px;" src="https://cdn1.iconfinder.com/data/icons/file-formats-7/502/Untitled-5-512.png" alt=""></a>
+        </div>
+    </div>
+</body>
+
+</html>

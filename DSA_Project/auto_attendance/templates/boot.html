@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatic Attendance System</title>
+    <style>
+      * {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+   }
+
+   body {
+     font-family: 'Open Sans', sans-serif;
+     background-color: #222;
+   }
+
+   .container {
+     width: 600px;
+     margin: 0 auto;
+     padding: 50px;
+     background-color: #333;
+     border-radius: 10px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+     color: #fff;
+   }
+
+   .tab {
+     width: 400px;
+     margin: 0 auto;
+     padding: 20px;
+     background-color: #333;
+     border-radius: 5px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+     color: #fff;
+   }
+
+   h1 {
+     text-align: center;
+     margin-bottom: 30px;
+     font-size: 40px;
+     color: #b38bff;
+   }
+
+   div {
+       margin: 20px;
+       text-align: center;
+   }
+   
+   select {
+     padding: 12px;
+     border: none;
+     border-radius: 5px;
+     margin-bottom: 20px;
+     font-size: 16px;
+     color: #fff;
+     background-color: #555;
+   }
+   
+   .tab {
+     margin-bottom: 10px;
+     font-size: 22px;
+   }
+
+   input {
+     padding: 12px;
+     border: none;
+     border-radius: 5px;
+     margin-bottom: 20px;
+     font-size: 16px;
+     color: #fff;
+     background-color: #555;
+   }
+
+   option {
+       font-size: 16px;
+   }
+
+   button {
+     padding: 10px 20px 10px 20px;
+     background-color: #b38bff;
+     color: #fff;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+     font-size: 18px;
+     transition: background-color 0.2s ease-in-out;
+   }
+
+   button:hover {
+     background-color: #8c5fb2;
+   } 
+   </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Automatic Attendance System</h1>
+        <form method="post" enctype="multipart/form-data" action="/">
+            {% csrf_token %}
+            <div>
+                <button id="newRegistrationButton">For New Registration</button>
+            </div>
+            <div>
+                <div class="tab">Select a Year</div>
+                <select id="select_year" name="select_year">
+                    <option value="Btech_1st_Year">Btech 1st Year</option>
+                    <option value="Btech_2nd_Year">Btech 2nd Year</option>
+                    <option value="Btech_3rd_Year">Btech 3rd Year</option>
+                    <option value="Btech_4th_Year">Btech 4th Year</option>
+                </select>
+            </div>
+            <div>
+                <div class="tab">Select a department</div>
+                <select id="select_department" name="select_department">
+                    <option value="Computer_Science">CSE</option>
+                    <option value="Electrical">EE</option>
+                    <option value="Mechanical">ME</option>
+                    <option value="Civil">CE</option>
+                    <option value="Maths_and_Computing">MNC</option>
+                </select>
+            </div>
+            <div>
+                <div class="tab">Select a Course</div>
+                <select id="select_course" name="select_course">
+                    <option value="CS 201">CS 201</option>
+                    <option value="CS 203" selected>CS 203</option>
+                    <option value="CS 207">CS 207</option>
+                </select>
+            </div>
+            <div>
+                <div class="tab">Select a Date</div>
+                <input type="date" id="select_date" name="select_date">
+            </div>
+            <div>
+                <div class="tab">Upload Photo</div>
+                <input type="file" id="photo" name="photo" accept="image/*" multiple required>
+            </div>
+            <div>
+                <button type="submit">Get Attendance</button>
+            </div>
+        </form>
+    </div>
+    <script>
+      document.getElementById('newRegistrationButton').addEventListener('click', function() {
+        window.location.href = '/login/';
+      });
+    </script>
+</body>
+</html>
