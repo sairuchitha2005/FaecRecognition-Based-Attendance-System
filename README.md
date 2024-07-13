@@ -56,6 +56,10 @@ To use the Project :
 
 • You can upload a/many group images and you will get a single csv file with the marked attendance of the students present in the image.
 
+#Team Members
+• B Rithvik
+• K Sai Ruchita
+
 • If you want to add a student of a particular department, you can click the add new registration button and give a photo of yours
 
 
