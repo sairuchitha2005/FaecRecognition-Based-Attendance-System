@@ -59,5 +59,7 @@ To use the Project :
 • If you want to add a student of a particular department, you can click the add new registration button and give a photo of yours
 
 # Team Members
+
 • B Rithvik
+
 • K Sai Ruchita
