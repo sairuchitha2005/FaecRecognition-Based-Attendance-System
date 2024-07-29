@@ -1,4 +1,4 @@
-# FaecRecognition-Based-Attendance-System
+# FaceRecognition-Based-Attendance-System
 Introducing the state-of-the-art solution for safe and effective attendance tracking: the FaceRecognition Attendance System. This solution makes the attendance process more efficient and accurate by using cutting-edge facial recognition technology. Written in Python, HTML, and CSS, this Django application is an attendance system that uses facial recognition.
 
 
